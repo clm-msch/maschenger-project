@@ -1,15 +1,11 @@
-import { firebaseApp } from "../firebase_config.js";
-import { getFirestore, collection, doc, setDoc, timestamp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
-import { time } from "console";
-
-// const ref = admin.firestore().collection('messages').orderBy('timestamp');
+import { db } from "../firebase_config.js";
+import { getFirestore, collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.16.0//firebase-firestore.js";
 
 export default {
     data() {
         return {
             user: {
-                message: '',
-                timestamp: ''
+                message: ''
             }
         }
     },
@@ -18,11 +14,9 @@ export default {
             const db = getFirestore(firebaseApp);
             const msgRef = collection(db, "testmsg1");
             await setDoc(doc(msgRef, this.user.timestamp), {
-                message : this.user.message ,
-                timestamp: timestamp()
+                message : this.user.message
             });
             this.user.message = '';
-            this.user.timestamp = '';
         }
     },
     template: `

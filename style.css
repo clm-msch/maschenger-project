@@ -1,0 +1,21 @@
+@font-face {
+    font-family: JosanRegular;
+    src: url(fonts/SourceSansPro-Regular.ttf);
+}
+:root {
+    --color-primary: #FFF3B3;
+    --color-secondary: #1F2439;
+    --font: JosanRegular;
+}
+
+body {
+    background-color: var(--color-secondary);
+    font-family: var(--font);
+    color: var(--color-primary);
+}
+
+button {
+    background-color: var(--color-primary);
+    font-family: var(--font);
+    color: var(--color-secondary);
+}

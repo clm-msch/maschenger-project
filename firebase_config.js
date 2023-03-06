@@ -1,3 +1,5 @@
+// connexion à la base de données firebase
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
 
 const firebaseConfig = {
@@ -9,21 +11,7 @@ const firebaseConfig = {
     appId: "1:882462609276:web:73ac56b4de3766108d1ef9"
   };
 
-  export const db = initializeApp(firebaseConfig);
+  // envoi des paramètres de connexion à la base de données
+  export const firebaseApp = initializeApp(firebaseConfig);
   
-//   // Initialize Firebase
-//   // export const firebaseApp = initializeApp(firebaseConfig);
-//   const app = initializeApp(firebaseConfig);
-
-//   const db = getFirestore(app);
-
-// const msgRef = collection(db, "testmsg1");
-
-// // await setDoc(doc(msgRef,), {
-// //     user1: [
-// //       "name: "Clem","
-// //       "messages: ["messoge1", "messagoge2"]"
-// //     ]
-
-// // });
 

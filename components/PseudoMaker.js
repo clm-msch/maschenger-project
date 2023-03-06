@@ -6,7 +6,7 @@ export default {
     },
     methods: {
         save() {
-            this$emit('update', this.pseudo)
+            this.$emit('update', this.pseudo)
         }
     },
     template: `
